@@ -95,6 +95,8 @@ No Python packaging provided in the interest of time.
 
 ### What other choices I might have made
 
+* Instead of logging a warning, raise exception when initializing Points or lines with floats, to enforce good decimal precision
+
 * More pruning of the candidate lines if possible. You can see the "explosion" of candidate lines by comparing the
   candidates for a six-point input set to those of an eight-point input set:
 

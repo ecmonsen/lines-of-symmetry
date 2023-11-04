@@ -63,7 +63,7 @@ def main():
     """
     parser = argparse.ArgumentParser(description=desc)
     parser.add_argument("--graph", help="Create a PNG with a graph representation of the points and symmetry lines")
-    parser.add_argument("--log-level", "-l", help="Python log level", default="ERROR")
+    parser.add_argument("--log-level", "-l", help="Python log level", default="WARNING")
     parser.add_argument("--precision", "-p",
                         help="Number of digits of precision to use when comparing floating point numbers", type=int,
                         default=12)

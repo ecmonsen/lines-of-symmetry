@@ -51,6 +51,8 @@ class Point:
     """
 
     def __init__(self, x:Any, y:Any):
+        if isinstance(x, float) or isinstance(y, float):
+            logger.warning("Point was initialized with floats. Use Decimal or string for better precision")
         self.x = Decimal(str(x)) if x is not Decimal else x
         self.y = Decimal(str(y)) if y is not Decimal else y
 
@@ -68,6 +70,8 @@ class Point:
 class Line:
     def __init__(self, slope: Any = Decimal("nan"), intercept: Any = Decimal("nan"), x: Any = Decimal("nan"), point0=None,
                  point1=None):
+        if isinstance(slope, float) or isinstance(intercept, float) or isinstance(x, float):
+            logger.warning("Line was initialized with floats. Use Decimal or string for better precision")
 
         self.slope = Decimal(str(slope)) if slope is not Decimal else slope
         self.intercept = Decimal(str(intercept)) if intercept is not Decimal else intercept
