@@ -36,7 +36,8 @@ The following properties of the symmetry lines drive the algorithm:
 1. Symmetry lines must pass through the centroid (center of gravity) of the set of points.
 2. For a given point to be reflected onto one of the points in the set, the point must either
     1. lie on the line of symmetry, OR
-    2. the symmetry line bisects a line segment drawn between the point and its reflected point
+    2. the symmetry line bisects a line segment drawn between two input points (a point and its reflected point)
+        2. *TODO 11/6: additionally, the centroid is equidistant from the point & its reflected point*
 
 These observations suggest a finite set of "candidate" lines that we can try to fold the points around.
 
